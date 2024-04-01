@@ -783,7 +783,6 @@ License
 
 Copyright &copy; 2018 Susam Pal
 
-[![CC BY 4.0 Logo](meta/ccby.svg "CC BY 4.0")][CCBY]
 <!-- :: -->
 This document is licensed under the
 [Creative Commons Attribution 4.0 International License][CCBY].
