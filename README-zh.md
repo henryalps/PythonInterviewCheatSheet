@@ -212,3 +212,4 @@ Queue、PriorityQueue 和 LifoQueue 中的`put()` 和 `get()` 方法默认设定
 ## 杂项
 1. `assert`可以接收两个参数，第二个参数是失败时提供的错误信息。如`assert self.max_height == 3, "Unexpected max height"`
 2. 用`raise`抛出异常时，选择内置的异常类型无需进行额外导入。如`raise(Exception('this is wrong'))`或`raise(ValueError('this is wrong'))
+3. 用`help()`和`dir()`列出某个包所包含的全部函数和常量
