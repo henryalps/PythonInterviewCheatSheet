@@ -195,6 +195,11 @@ Here's a table of common built-in functions in Python, their descriptions, retur
 
 All the above functions are executed immediately upon invocation. In Python 3.x, `map()` and `filter()` return iterators, and results should be converted to a list or other form to view all the results. Although `map()`, `zip()`, and `filter()` return iterators, these functions are still executed immediately without lazy evaluation.
 
+## Common Package Functions
+| Package Name | Name | Description | Return Value | Example | Example Output |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `itertools` | `zip_longest()` | Creates an iterator that aggregates elements from each of the iterables. If one of the iterable objects ends early, it is filled in with None | An iterator, whose elements are tuples, which may contain None | `from itertools import zip_longest; result = zip_longest([1, 2, 3, 4], ['a', 'b']); print(list(result))` | `[(1, 'a'), (2, 'b'), (3, None), (4, None)]` |
+
 ## Contribution
 
 Please feel free to open an issue or pull request if you think something can be improved or added.
