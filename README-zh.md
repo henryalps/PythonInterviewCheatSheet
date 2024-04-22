@@ -209,6 +209,11 @@ Queue、PriorityQueue 和 LifoQueue 中的`put()` 和 `get()` 方法默认设定
 
 以上都是调用时立即执行的函数。`map()`和`filter()`如果在Python3.x中返回迭代器，需要通过`list()`或其他方式转换才能看到所有的结果。虽然`map()`、`zip()`、`filter()`等返回的是迭代器，这些函数仍然是立即执行的，没有实现惰性计算。
 
+## 常用包方法
+| 包名称 | 名称 | 说明 | 返回值 | 示例 | 示例输出 |
+| :--- | :--- | :--- | :--- | :--- | :--- 
+| `itertools` | `zip_longest()` | 构造一个迭代器，聚合来自每个可迭代对象的元素，如果其中一个可迭代对象先结束，则以None填充 | 一个迭代器，其元素为元组，可能含有None | from itertools import zip_longest; result = zip_longest([1, 2, 3, 4], ['a', 'b']); print(list(result)) | [(1, 'a'), (2, 'b'), (3, None), (4, None)] |
+
 ## 杂项
 1. `assert`可以接收两个参数，第二个参数是失败时提供的错误信息。如`assert self.max_height == 3, "Unexpected max height"`
 2. 用`raise`抛出异常时，选择内置的异常类型无需进行额外导入。如`raise(Exception('this is wrong'))`或`raise(ValueError('this is wrong'))
