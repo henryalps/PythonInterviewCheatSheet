@@ -214,6 +214,21 @@ Queue、PriorityQueue 和 LifoQueue 中的`put()` 和 `get()` 方法默认设定
 | :--- | :--- | :--- | :--- | :--- | :--- 
 | `itertools` | `zip_longest()` | 构造一个迭代器，聚合来自每个可迭代对象的元素，如果其中一个可迭代对象先结束，则以None填充 | 一个迭代器，其元素为元组，可能含有None | from itertools import zip_longest; result = zip_longest([1, 2, 3, 4], ['a', 'b']); print(list(result)) | [(1, 'a'), (2, 'b'), (3, None), (4, None)] |
 
+## 常用字符串方法
+| 方法 | 描述 | 返回值 | 示例 | 示例的输出 |
+| :--- | :--- | :--- | :--- | :--- |
+| `s.lower()` | 返回字符串的小写版本 | 字符串 | `s = "HELLO"; s.lower()` | `'hello'` |
+| `s.upper()` | 返回字符串的大写版本 | 字符串 | `s = "hello"; s.upper()` | `'HELLO'` |
+| `s.strip()` | 返回删除了前导和后缀空白的字符串 | 字符串 | `s = " hello "; s.strip()` | `'hello'` |
+| `s.isalpha()` | 检测字符串是否全由字母组成 | 布尔值 | `s = "hello"; s.isalpha()` | `True` |
+| `s.isdigit()` | 检测字符串是否全由数字组成 | 布尔值 | `s = "1234"; s.isdigit()` | `True` |
+| `s.startswith(t)` | 检查字符串是否以子串 `t` 开始 | 布尔值 | `s = "hello"; s.startswith("he")` | `True` |
+| `s.endswith(t)` | 检查字符串是否以子串 `t` 结束 | 布尔值 | `s = "hello"; s.endswith("lo")` | `True` |
+| `s.find(t)` | 返回子串 `t` 在字符串中首次出现的最低索引。如果 `t` 未在字符串出现则返回 `-1`| 整数 | `s = "hello"; s.find("l")` | `2` |
+| `s.replace(old, new)` | 返回一个新字符串，其中 `old` 被 `new` 替换 | 字符串 | `s = "hello"; s.replace("l", "a")` | `'heaao'` |
+| `s.split(t)` | 以 `t` 为分隔符将字符串 `s` 分离为一个列表 | 列表 | `s = "hello world"; s.split(' ')` | `['hello', 'world']` |
+| `'t'.join(s)` | 以 `t` 为连接字符将序列 `s` 连接为一个字符串 | 字符串 | `s = ['hello', 'world']; ' '.join(s)` | `'hello world'` |
+
 ## 杂项
 1. `assert`可以接收两个参数，第二个参数是失败时提供的错误信息。如`assert self.max_height == 3, "Unexpected max height"`
 2. 用`raise`抛出异常时，选择内置的异常类型无需进行额外导入。如`raise(Exception('this is wrong'))`或`raise(ValueError('this is wrong'))
