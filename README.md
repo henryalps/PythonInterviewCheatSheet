@@ -200,6 +200,21 @@ All the above functions are executed immediately upon invocation. In Python 3.x,
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `itertools` | `zip_longest()` | Creates an iterator that aggregates elements from each of the iterables. If one of the iterable objects ends early, it is filled in with None | An iterator, whose elements are tuples, which may contain None | `from itertools import zip_longest; result = zip_longest([1, 2, 3, 4], ['a', 'b']); print(list(result))` | `[(1, 'a'), (2, 'b'), (3, None), (4, None)]` |
 
+## Frequently Used String Functions
+| Method | Description | Return Value | Example | Example Output |
+| :--- | :--- | :--- | :--- | :--- |
+| `s.lower()` | Returns the lowercase version of the string | A string | `s = "HELLO"; s.lower()` | `'hello'` |
+| `s.upper()` | Returns the uppercase version of the string | A string | `s = "hello"; s.upper()` | `'HELLO'` |
+| `s.strip()` | Returns the string with leading and trailing whitespace removed | A string | `s = " hello "; s.strip()` | `'hello'` |
+| `s.isalpha()` | Checks if the string is composed entirely of alphabets | Boolean | `s = "hello"; s.isalpha()` | `True` |
+| `s.isdigit()` | Checks if the string is composed entirely of digits | Boolean | `s = "1234"; s.isdigit()` | `True` |
+| `s.startswith(t)` | Checks if the string starts with a substring `t` | Boolean | `s = "hello"; s.startswith("he")` | `True` |
+| `s.endswith(t)` | Checks if the string ends with a substring `t` | Boolean | `s = "hello"; s.endswith("lo")` | `True` |
+| `s.find(t)` | Returns the lowest index in the string where substring `t` is found. Returns `-1` if `t` is not found | An integer | `s = "hello"; s.find("l")` | `2` |
+| `s.replace(old, new)` | Returns a string where all occurrences of `old` are replaced by `new` | A string | `s = "hello"; s.replace("l", "a")` | `'heaao'` |
+| `s.split(t)` | Splits the string `s` into a list where `t` is the delimiter | A list | `s = "hello world"; s.split(' ')` | `['hello', 'world']` |
+| `'t'.join(s)` | Joins a sequence 's' into a string with 't' as a separator | A string | `s = ['hello', 'world']; ' '.join(s)` | `'hello world'` |
+
 ## Contribution
 
 Please feel free to open an issue or pull request if you think something can be improved or added.
